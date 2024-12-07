@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - AfroTech Conference</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .floating-image.left {
+            left: -300px;
+            top: 100px;
+        }
+
+        .floating-image.right {
+            right: -300px;
+            top: 400px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            text-align: justify;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                left: auto !important;
+                right: auto !important;
+                margin: 2rem auto;
+                display: block;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #7</div>
+            <h1 class="entry-title">AfroTech Conference 2024: Innovation, Opportunity—or Exclusivity?</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/afro.png" alt="AfroTech Conference" class="floating-image left">
+            <img src="../images/fees.png" alt="Conference Fees" class="floating-image right">
+
+            <p>In November 2024, Houston, TX, hosted the AfroTech Conference, a celebrated event that brings together Black professionals, students, and tech enthusiasts to connect with industry leaders, learn about the latest innovations, and explore career opportunities. The name AfroTech itself is compelling—a nod to the intersection of technology and Black excellence. But here's the twist: this conference wasn't free. In fact, tickets ranged from $300 to a staggering $2,250, not including travel and accommodation. The total cost? Easily around $1,000.</p>
+
+            <p>Let that sink in for a moment. A conference ostensibly designed to uplift and empower Black professionals—a demographic historically underrepresented in tech—comes with a price tag that excludes many of the very people it claims to serve. For a student like me, this raises critical questions about accessibility, equity, and the commercialization of opportunity.</p>
+
+            <p>First, let's talk about the price. While $1,000 might not seem like much to some, it's a significant barrier for students, early-career professionals, and those from lower-income backgrounds. AfroTech claims to be about creating opportunities, but if only those with financial means can afford to attend, isn't it perpetuating the same exclusivity it aims to dismantle? For many, that $1,000 could mean the difference between paying rent or chasing a dream.</p>
+
+            <p>This leads to a deeper issue: the ethics of paying for access. AfroTech markets itself as a gateway to networking with top tech companies, securing mentorship, and potentially landing jobs. But at its core, isn't this a form of pay-to-play? The idea of paying for access to recruiters and hiring managers feels unsettlingly close to bribery. Should opportunities in tech—an industry already plagued by inequities—be contingent on one's ability to afford a ticket to the room where it happens?</p>
+
+            <p>And then there's the psychological toll. Imagine walking into AfroTech as a student or recent graduate, excited to network but acutely aware of the financial strain it took to get there. Every handshake, every elevator pitch, every business card exchange is tinged with the pressure to make it worth it. If you don't leave with a job offer or a groundbreaking connection, did you just waste $1,000? That's a heavy burden to place on young professionals already navigating an industry notorious for its barriers to entry.</p>
+
+            <p>The exclusivity of AfroTech also raises a troubling paradox. The tech industry has long struggled with diversity, and AfroTech positions itself as a solution. Yet by pricing out those without financial means, it risks reinforcing the very barriers it seeks to dismantle. Tech needs more voices from diverse socioeconomic backgrounds, not fewer. When only the well-off can afford to attend events like AfroTech, it narrows the pipeline instead of broadening it.</p>
+
+            <p>So what's the solution? AfroTech, and similar conferences, could consider more inclusive models. Scholarships, sliding-scale ticket prices, or even virtual attendance options could make a world of difference. Sponsors—many of which are billion-dollar tech companies—could step up to subsidize attendance for students and early-career professionals. After all, if these companies genuinely care about diversifying their workforce, investing in accessibility for events like AfroTech is a no-brainer.</p>
+
+            <p>But beyond cost, we need to critically examine the entire premise of paying for access to opportunity. Should connecting with industry leaders and landing a job require a financial investment? Or should these opportunities be democratized, available to anyone with the drive and talent to seize them? AfroTech has the potential to be a game-changer in the tech industry, but only if it lives up to its promise of inclusion and empowerment.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry6.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+            <button class="nav-button" onclick="window.location.href='entry8.html'">Next</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

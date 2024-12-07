@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - Nassau Street</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-image.circular {
+            border-radius: 50%;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .floating-image.left {
+            left: -300px;
+            top: 100px;
+        }
+
+        .floating-image.right {
+            right: -300px;
+            top: 200px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            text-align: justify;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                left: auto !important;
+                right: auto !important;
+                margin: 2rem auto;
+                display: block;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #12</div>
+            <h1 class="entry-title">Nassau Street: A Snapshot of Princeton's Class and Culture</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/nassau.png" alt="Nassau Street" class="floating-image left">
+            <img src="../images/junbi.png" alt="Coffee Shop" class="floating-image right circular">
+
+            <p>Nassau Street is where Princeton's social dynamics come alive, a space where class is quietly but unmistakably on display. The coffee shops and restaurants lining the street often serve as a second home for a particular type of student—those who seem to occupy the space with effortless ease. Their casual confidence isn't about ostentation; it's in the way they order without checking prices, linger without urgency, and treat Nassau as an extension of their already privileged world. For them, it's a lifestyle, a place where leisure and affluence intersect seamlessly.</p>
+
+            <p>But Nassau also tells a quieter story about exclusion. For students on tighter budgets, the street can feel like a space meant for others. Its unspoken rules—of belonging, of casual spending, of comfort—create invisible barriers that are rarely acknowledged but deeply felt. It doesn't stop at who has access to a $6 coffee or a $20 lunch; it extends to who feels entitled to take up space, to linger, to call it their own. On Nassau, class isn't flaunted—it's embedded in the way the street is used, revealing who gets to feel at home and who is just passing through.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry11.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - The Silent Ballot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .floating-image.left {
+            left: -300px;
+            top: 100px;
+        }
+
+        .floating-image.right {
+            right: -300px;
+            top: 400px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                left: auto !important;
+                right: auto !important;
+                margin: 2rem auto;
+                display: block;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #2</div>
+            <h1 class="entry-title">The Silent Ballot: Observing the 2024 U.S. Election from the Outside</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/party.png" alt="Political Party" class="floating-image left">
+            <img src="../images/elections.png" alt="Elections" class="floating-image right">
+
+            <p>The 2024 U.S. presidential election was the first one I truly witnessed, and it uncovered an interesting web and connection of politics, social class, and identity in America that I had only read about before. What struck me the most was how deeply personal, yet paradoxically impersonal, the act of voting seemed to be. Conversations about the election were shrouded in secrecy. Of the dozens of students I asked about their votes, almost all avoided the question, only revealing their choices after the ballots had been cast.</p>
+
+            <p>This silence fascinated me. In other parts of the world, politics is a loud and communal affair. People debate fiercely, wear their affiliations like badges, and rally in public squares. But here, politics felt like a whispered confession, as if revealing one's vote was as risky as sharing a family secret. Why this hesitance? Perhaps it stems from the polarization of American politics, where every opinion feels like a grenade tossed into an already tense room. Or maybe it's because, in a society obsessed with individualism, even political choices are treated as deeply private, almost sacred.</p>
+
+            <p>One conversation stood out to me during the election period. A friend, a reliable Democrat, surprised me with his critique of his own party. He said, "The Democrats focus so much on issues like LGBTQ+ rights and abortion, which are important, but they neglect the working class. Meanwhile, Republicans, despite their flaws, speak more directly to bread-and-butter issues like the economy." His comment hit on something profound: the disconnect between party rhetoric and voter priorities. It wasn't that he opposed the Democrats' stance on social issues—he supported them—but he questioned their ability to resonate with ordinary Americans who are more worried about affording groceries than the nuances of identity politics.</p>
+
+            <p>This made me think about the hierarchy of issues in American politics. Is it possible for a party to champion both social justice and economic reform without alienating its base? Or are these priorities inherently at odds? The Republicans, for all their controversial stances, seem to understand the power of simplicity: focus on jobs, inflation, and taxes—the tangible struggles of daily life. The Democrats, by contrast, often seem to speak in abstractions that resonate with college campuses and coastal elites but leave factory workers in the Midwest feeling unseen.</p>
+
+            <p>I also noticed something curious about the racial dynamics of political affiliations. From my conversations and some quick research, it became clear that racial groups in the U.S. align with parties in ways that are as much historical as they are contemporary. White voters tend to lean Republican, while Black and Asian voters are overwhelmingly Democratic. This divide is rooted in decades of history, from the Civil Rights Movement to immigration policies, but it's striking how those legacies still play out in modern elections. At times, it felt like political loyalty was as much a product of identity as it was of ideology—a fascinating, if unsettling, reality.</p>
+
+            <p>As the results trickled in, Princeton's campus fell into a strange silence. The disappointment among students was notable. Statistically, most college students lean Democrat, and the election's outcome didn't seem to favor their hopes. The quiet wasn't just about losing; it was about grappling with a system that felt, to many of them, broken.</p>
+
+            <p>What struck me most about these post-election reflections was the broader disillusionment among young voters. They are the most educated generation in history, yet they feel powerless in a system that seems dominated by money, gerrymandering, and aging politicians who don't understand their realities. It's as if the democratic process itself feels insufficient—a Band-Aid over a deep societal wound.</p>
+
+            <p>What the 2024 U.S. election taught me is that American politics is not just about left vs. right, red vs. blue. It's about a complex interplay of class, race, and values. It's about a country that is deeply divided, not just in terms of policies but in its very perception of what democracy should look like. For me, as an outsider, it was less about choosing sides and more about understanding the fault lines—and wondering how, or if, they can ever be mended.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry1.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+            <button class="nav-button" onclick="window.location.href='entry3.html'">Next</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

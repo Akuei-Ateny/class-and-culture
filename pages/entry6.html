@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - The Princeton Eating Clubs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .floating-image.left {
+            left: -300px;
+            top: 100px;
+        }
+
+        .floating-image.right {
+            right: -300px;
+            top: 400px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            text-align: justify;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                left: auto !important;
+                right: auto !important;
+                margin: 2rem auto;
+                display: block;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #6</div>
+            <h1 class="entry-title">The Princeton Eating Clubs: More Than Just Meals</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/clubs.png" alt="Princeton Eating Clubs" class="floating-image left">
+            <img src="../images/eating.jpg" alt="Dining Experience" class="floating-image right">
+
+            <p>In my freshman year, I had a roommate who, by junior year, joined one of Princeton's Eating Clubs. This fall semester, I bumped into him, and the topic naturally came up. When he asked me which Eating Club I had joined, I told him I was on the independent meal plan. His response surprised me: "Actually, I wish I did that. The Eating Clubs are too expensive. And while the food's better than the dining halls, they're still doing the bare minimum."</p>
+
+            <p>His comment got me thinking about the Eating Clubs beyond just their menus. The truth is, these clubs aren't just about food; they're social ecosystems that reflect deeper divides at Princeton—financial, cultural, and social. Most Eating Club members hail from affluent backgrounds. Membership fees, though sometimes subsidized by financial aid, are steep, and the culture within these clubs often aligns with the financial privilege of their members. The clubs themselves seem to embody unspoken hierarchies, with wealth often determining who feels at home.</p>
+
+            <p>But this wasn't the end of our conversation. My roommate and I delved deeper into the unique cultures of each club. There's one that's predominantly white, another with a strong Asian presence, one known for being a queer-friendly haven, and yet another celebrated for its diversity. Each club has its own identity, almost like mini-nations within the broader Princeton community. This made me wonder: What happens when a student lands in a club where they feel out of place?</p>
+
+            <p>The process of joining an Eating Club—known as "bickering"—is essentially a week-long compatibility test, where existing members assess whether a prospective member "fits." If that sounds familiar, it should: it's eerily reminiscent of Rivera's Beginning the Interview: Finding a Fit. You're not just auditioning for a meal plan—you're auditioning for a social identity. And like any audition, it's fraught with the anxiety of whether your vibe aligns with theirs. Bickering is supposed to be about chemistry, but is it really about shared values and interests, or is it about perpetuating certain social circles and cultural norms?</p>
+
+            <p>Even for those who make it past the bickering process, the real challenges might only just begin. The problem, truly, isn't just about affording the club's fees. It's about affording the lifestyle. What happens when a club plans a spring break trip to the Bahamas, and everyone's expected to cover their own expenses? Or when social outings require dropping hundreds of dollars without a second thought? For students from low-income backgrounds, the question isn't just "Can I afford this club?" It's "Can I afford the life that comes with it?"</p>
+
+            <p>This isn't just hypothetical. It reflects a broader question about inclusion and belonging in elite institutions. Financial aid can bridge the gap for membership fees, but can it bridge the cultural and social divides that these clubs often highlight? The Eating Clubs are reflections of privilege, where the ability to participate fully often hinges on one's economic background.</p>
+
+            <p>And yet, there's a kind of magic to these clubs that's hard to ignore. For those who find their fit, the Eating Clubs offer community, camaraderie, and a sense of belonging. They're spaces where friendships are created over late-night meals and laughter is heard across historic halls. But this exclusivity also comes at a price—not just financial, but social.</p>
+
+            <p>To me, the Eating Clubs are a paradox. They represent both the best and worst of Princeton: a vibrant tradition of connection and community, but also a clear indication of the divides that persist in elite spaces. They force us to ask difficult questions about what inclusion really means. Is it enough to give someone a seat at the table if they can't afford the lifestyle that comes with it? Can the clubs evolve to become truly inclusive, or are they destined to remain bastions of privilege? For now, just like some, I remain on my independent meal plan. Not because I dislike the idea of the clubs, but because I prefer to eat without auditioning for a place at the table.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry5.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+            <button class="nav-button" onclick="window.location.href='entry7.html'">Next</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

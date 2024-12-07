@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - The Social Ecosystem</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .floating-image.center {
+            right: -350px;
+            top: 250px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            text-align: justify;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                right: auto;
+                top: auto;
+                margin: 2rem auto;
+                display: block;
+                width: 250px;
+                height: 250px;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #4</div>
+            <h1 class="entry-title">The Social Ecosystem: Analyzing My Circle</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/circle.png" alt="Social Circle" class="floating-image center">
+
+            <p>In class, we watched a video about how students in a U.S. middle school segregated themselves into social groups based on their financial backgrounds. The patterns were stark: the affluent kids with their first cars and designer backpacks stuck together, while those from working-class families formed their own cliques. What intrigued me most wasn't the segregation itself—it was the unspoken rule that similarity breeds connection. This inspired me to take a closer look at my own circle at Princeton and uncover what binds us together.</p>
+
+            <p>At first glance, my friend group seems diverse. We come from all corners of the world—Africa, Europe, Asia—and our financial backgrounds are just as varied. But beneath this diversity lies a common thread: shared mindsets, values, and interests. For instance, most of my friends are international students. I naturally gravitate toward them because, unlike many Americans I've met, they feel more genuine in their interactions. International students don't shower you with "Oh my God, you look amazing today" unless they truly mean it. This isn't to paint all Americans with a broad brush, but there's a tendency I've observed—a kind of performative niceness.</p>
+
+            <p>Conversations with Americans often feel like walking on eggshells. Words are weighed, filtered, and cautiously delivered. A simple slip, like using "he" instead of "they," can spiral into offense, even when no harm was intended. I get it—language is powerful, and inclusivity matters—but for someone from a culture where intent takes precedence over phrasing, this hypersensitivity can feel stifling. With international friends, the rules of engagement are more forgiving. It's less about what you say and more about what you mean.</p>
+
+            <p>Beyond cultural compatibility, there's another layer to my circle: the hustle mindset. Most of my friends share a relentless drive to build something, whether it's through crypto trading, technology, chess, or cracking jokes over the latest memes. Our conversations often orbit around strategies for making money, solving problems, or navigating life's quirks. There's a rawness to these interactions—a shared ambition that transcends background and binds us together.</p>
+
+            <p>But I didn't stop at analyzing my own group. I zoomed out, observing the social dynamics of Princeton's dining hall. The patterns were eerily similar to the middle school in that video. Black students tended to sit with other Black students. Indians clustered together. White students, the same. It wasn't forced or explicit; it just happened.</p>
+
+            <p>This raises a fascinating question: Is this self-segregation a product of choice, or is it a natural phenomenon? Psychologists often point to the concept of homophily—our tendency to bond with people who are similar to us. Shared culture, language, and experiences act as social glue, creating a comfort zone that feels safe and familiar. But is this natural gravitation limiting? Are we unconsciously closing ourselves off to the richness that comes from truly diverse relationships?</p>
+
+            <p>The answer isn't simple. On one hand, shared identity creates a powerful sense of belonging. On the other, it can reinforce divides and prevent meaningful cross-cultural connections. For me, the balance lies in maintaining my core circle while also stepping out of it—engaging with people whose worldviews challenge mine.</p>
+
+            <p>Ultimately, my circle reflects a broader truth about human nature: we're drawn to those who feel like extensions of ourselves. Whether it's through shared ambition, cultural similarities, or mutual understanding, we find and form tribes that make us feel at home. And while this isn't inherently bad, it's worth questioning: Are we choosing comfort at the expense of growth? Or are these connections the very thing that makes us thrive? The answer, I suspect, lies somewhere in between.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry3.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+            <button class="nav-button" onclick="window.location.href='entry5.html'">Next</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

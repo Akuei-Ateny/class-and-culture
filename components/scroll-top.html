@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #2c3e50;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: #34495e;
+            transform: translateY(-3px);
+        }
+
+        .scroll-top::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-left: 3px solid white;
+            border-top: 3px solid white;
+            transform: rotate(45deg);
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .scroll-top {
+                bottom: 80px; /* Above the navigation bar on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="scroll-top" aria-label="Scroll to top"></button>
+
+    <script>
+        class ScrollTopButton {
+            constructor() {
+                this.button = document.querySelector('.scroll-top');
+                this.initializeListeners();
+            }
+
+            initializeListeners() {
+                window.addEventListener('scroll', () => {
+                    this.toggleButtonVisibility();
+                });
+
+                this.button.addEventListener('click', () => {
+                    this.scrollToTop();
+                });
+            }
+
+            toggleButtonVisibility() {
+                if (window.scrollY > 300) {
+                    this.button.classList.add('visible');
+                } else {
+                    this.button.classList.remove('visible');
+                }
+            }
+
+            scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Initialize scroll to top button
+        const scrollTopButton = new ScrollTopButton();
+    </script>
+</body>
+</html>

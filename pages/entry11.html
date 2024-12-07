@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - The Campus Gym</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .floating-image.left {
+            left: -300px;
+            top: 100px;
+        }
+
+        .floating-image.right {
+            right: -300px;
+            top: 400px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            text-align: justify;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                left: auto !important;
+                right: auto !important;
+                margin: 2rem auto;
+                display: block;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #11</div>
+            <h1 class="entry-title">The Campus Gym and Its Quiet Hierarchies</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/gym.jpeg" alt="Campus Gym" class="floating-image left">
+            <img src="../images/dym.jpg" alt="Gym Equipment" class="floating-image right">
+
+            <p>The campus gym is one of those spaces that pretends to be for everyone. Theoretically, it's open and accessible. But spending time there reveals something different. In the early mornings, it's packed with athletes—primarily scholarship students—who move through their routines with the discipline of professionals. In the evenings, the crowd changes. Groups of students dressed in color-coordinated Lululemon sets jog on treadmills, sipping electrolyte-infused water. It's as much a social scene as it is a workout.</p>
+
+            <p>But the gym isn't just a place for exercise—it's a quiet reflection of privilege. Even the choice of activity speaks volumes. On the treadmills and ellipticals are students for whom fitness is a lifestyle, honed through years of personal trainers, Pilates classes, and access to top-tier facilities. Their workouts are seamless, almost performative, as though the gym is just another piece of their curated daily routine. In the free weights section, by contrast, the energy feels rawer, almost desperate, filled with students trying to squeeze as much value as possible out of their time there.</p>
+
+            <p>And then there are the students who don't come at all. Not because they don't want to, but because the gym isn't just a building with weights—it's a cultural space with its own unspoken rules. For many, stepping into a gym feels like entering a foreign country, its equipment and hierarchies baffling and intimidating. If you didn't grow up with access to sports, gyms, or even the language of fitness, the space can feel alien, even hostile.</p>
+
+            <p>The gym claims to be neutral, a place for all students to improve their health and well-being. But neutrality, I've learned, is often a myth. Access may be equal, but comfort is not. The gym, like the dining hall or the coffee shop, is layered with invisible boundaries. Who feels at home here? Who feels like they're performing? And who feels like they don't belong at all? These are the quiet, everyday ways that class and culture shape our shared spaces—and our sense of self.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry10.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+            <button class="nav-button" onclick="window.location.href='entry12.html'">Next</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

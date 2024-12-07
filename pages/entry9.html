@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - Dining Hall Observations</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .floating-image.left {
+            left: -300px;
+            top: 100px;
+        }
+
+        .floating-image.right {
+            right: -300px;
+            top: 400px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            text-align: justify;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                left: auto !important;
+                right: auto !important;
+                margin: 2rem auto;
+                display: block;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #9</div>
+            <h1 class="entry-title">Observations from the Dining Hall: Class, Culture, and the Unspoken Codes</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/dining1.jpg" alt="Dining Hall Scene 1" class="floating-image left">
+            <img src="../images/dining2.jpg" alt="Dining Hall Scene 2" class="floating-image right">
+
+            <p>The Princeton dining hall is a fascinating space, a place where class and culture play out in subtle, yet striking ways. At first glance, it's just a place to eat. But spend enough time there, and you'll notice patterns that reveal how deeply our backgrounds influence even the smallest, most mundane aspects of our lives.</p>
+
+            <p>One day, I sat at a table near the window, casually observing the room while eating. A group of students entered, their conversation carrying the unmistakable ease of privilege. They weren't loud or obnoxious—just effortlessly confident in a way that suggested they'd never had to worry about what it costs to eat well. One of them casually mentioned how their parents were considering renovating their summer home, and the others nodded in that casual, unbothered way that said, "This is normal." It was a passing comment, but it lingered with me. I realized how rarely I heard students from more modest backgrounds mention anything remotely comparable. For many of us, talk of "home" involves stories of sacrifices, not second properties.</p>
+
+            <p>On another occasion, I noticed how students approached the salad bar. I know it sounds trivial, but there was a clear difference. Some confidently piled their plates high with organic broccoli, spinach, and quinoa (I had to google this name), the language of "clean eating" rolling off their tongues like a second nature. Others, myself included, eyed the same section with skepticism—not because we didn't like salad, but because these were foods we'd never grown up with. This reminded me of what we learned in precept about how class can dictate even the foods we're familiar with.</p>
+
+            <p>One day, I was sitting with a group of international students and we were laughing about how "ridiculously bland" some of the American food is. We joked about missing our home-cooked meals, each sharing stories of spices and flavors that could put Princeton's dining options to shame, and my mind went straight to how culture shapes our tastes—and how even food, something so universal, can become a marker of belonging or alienation.</p>
+
+            <p>But the most fascinating observations often happen at the tables themselves. Who sits with whom? You'll notice patterns if you look closely enough. Black students tend to cluster together, as do Asian students. Athletes often form their own insular groups, easily identifiable by their team bags and merches. And then there are the wealthy students, whose presence is harder to define but unmistakable once you know the signs: the casual mentions of ski trips, the effortless style that doesn't look curated but clearly is. These groups don't intermingle as much as you'd think. It's not segregation by design, but by comfort—an unspoken tendency to gravitate toward those who share your background, your culture, your "language."</p>
+
+            <p>One moment stands out to me. I was sitting with a friend from a working-class background like mine, and we noticed a group of students across the room laughing loudly, carefree. My friend leaned in and said, half-joking, "They seem so unbothered by life." It wasn't said with ill intent, but with a kind of wistful recognition. There was a truth in that observation that stuck with me. Even in a space as seemingly neutral as the dining hall, the weight of class differences is always present—spoken or unspoken.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry8.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+            <button class="nav-button" onclick="window.location.href='entry10.html'">Next</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

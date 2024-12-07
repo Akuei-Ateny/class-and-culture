@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - Cracking the Code</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .floating-image.circular {
+            border-radius: 50%;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .floating-image.left {
+            left: -300px;
+            top: 100px;
+        }
+
+        .floating-image.right {
+            right: -300px;
+            top: 400px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                left: auto !important;
+                right: auto !important;
+                margin: 2rem auto;
+                display: block;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #3</div>
+            <h1 class="entry-title">Cracking the Code: Interviewing for SWE Internships</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/interview.png" alt="Interview Process" class="floating-image left circular">
+            <img src="../images/fit.jpg" alt="Finding the Right Fit" class="floating-image right circular">
+
+            <p>Every software engineering (SWE) interview I've tackled since reading Beginning the Interview: Finding a Fit by Rivera has felt like a new performance. The book's lessons echo in my mind: talk the "American way," start with small talk, and make it all about chemistry. I ask about their day, their favorite hobbies, or even their most mundane preferences—and yes, I genuinely try to seem interested. But if I'm being honest, I'm not sure how much I truly care about whether my interviewer loves their cat or their favorite coffee blend. The truth? I'm just trying to nail the vibe and get the job.</p>
+
+            <p>That's not to say I don't care about people. I do. But small talk? It's an acquired taste I'm not sure I've mastered—or tolerated. Still, I force myself into this ritual, shaping my tone and energy to fit the interviewer's. Will they respond better to enthusiasm or professionalism? Do they prefer light humor or sharp intellect? Not knowing, I stretch myself into a chameleon, testing the waters and adjusting my personality to mirror theirs.</p>
+
+            <p>This raises a deeper question: does this constant shapeshifting make me inauthentic? Or is authenticity itself a fluid concept? Humans are naturally multifaceted; we're not one fixed version of ourselves but rather a collection of identities, adapting based on context. Isn't tailoring my vibe to fit the moment just another facet of being human? Or does this perpetual code-switching chip away at who I really am?</p>
+
+            <p>What Rivera captures—and what I've seen in action—is the reality of "fit" in American professional culture. Technical skills matter, but so does the ability to navigate social nuances. I've watched incredibly talented African international students pour hours into honing their craft, only to face rejection after rejection. Then, I see American students, sometimes less skilled but more fluent in the art of connection, landing internships with ease. It's not just about competence; it's about chemistry, vibe, and the unsaid understanding of cultural cues.</p>
+
+            <p>This raises a frustrating truth: meritocracy in hiring is an illusion. In a world where "soft skills" can outweigh raw talent, the playing field isn't level. For those of us from cultures where work ethic and expertise speak louder than charm, the idea of performing for likability feels foreign—and exhausting. But it's the game we're expected to play.</p>
+
+            <p>And yet, I can't deny the genius of the "fit" concept. It's rooted in human nature. People hire people they like. They look for reflections of themselves—shared hobbies, mutual humor, aligned worldviews. The interview, then, isn't just about proving your capability; it's about convincing someone that you're the kind of person they'd want to sit next to every day.</p>
+
+            <p>The challenge, of course, is balancing authenticity with adaptability. How do you build genuine rapport without losing yourself? How do you master the performance without letting it define you? These are the questions I wrestle with every time I step into an interview. For now, I try to see it as a collaboration. I'm not abandoning my authenticity; I'm just choosing which version of myself to bring to the table. And in a world where both skills and chemistry are currency, this duality might just be the key to success.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry2.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+            <button class="nav-button" onclick="window.location.href='entry4.html'">Next</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Culture Journal - Beyond Appearances</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f7fa;
+            padding-bottom: 4rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .entry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .entry-number {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            animation: slideUp 1s ease-out;
+        }
+
+        .floating-image {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .floating-image.square {
+            border-radius: 15px;
+        }
+
+        .floating-image:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .floating-image.left {
+            left: -300px;
+            top: 100px;
+        }
+
+        .floating-image.right {
+            right: -300px;
+            top: 400px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            text-align: justify;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        .nav-button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background: #34495e;
+            transform: scale(1.05);
+        }
+
+        .home-button {
+            background: #e74c3c;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 1400px) {
+            .floating-image {
+                position: relative;
+                left: auto !important;
+                right: auto !important;
+                margin: 2rem auto;
+                display: block;
+            }
+            
+            .content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="entry-number">Entry #5</div>
+            <h1 class="entry-title">Beyond Appearances: The Price of Perception</h1>
+        </header>
+
+        <article class="content">
+            <img src="../images/room.png" alt="Decorated Room" class="floating-image square left">
+            <img src="../images/shoes.png" alt="Designer Shoes" class="floating-image square right">
+
+            <p>I've always loved fashion and interior decoration. My wardrobe houses a small collection of designer clothes and fancy shoes, and my college room is often praised as one of the most decorated on campus. It's a form of self-expression—a way to create a space that feels uniquely mine. Yet, whenever friends visit, their first reaction is often surprise, followed by assumptions.</p>
+
+            <p>I vividly remember an acquaintance walking into my room and blurting out, "Wait, how do you afford all this? Weren't you in FSI?" For context, the Freshman Scholars Institute (FSI) is a Princeton program for low-income and first-generation students, designed to help them adjust to college life before the academic year begins. His comment revealed two deeply embedded stereotypes: that owning designer clothes and creating a well-decorated space equates to wealth, and that coming from a low-income background should automatically exclude me from such luxuries.</p>
+
+            <p>These assumptions aren't entirely baseless. In a society where material possessions often signal status, it's easy to connect the dots: luxury items = money. But as we discussed in class, physical aesthetics are often an unreliable narrator. They tell only part of the story, leaving out the nuances and sacrifices that go unnoticed.</p>
+
+            <p>For instance, what my acquaintance didn't see was the strategy behind my lifestyle. Many of my "designer" clothes were thrifted or purchased during end-of-season sales. My room decorations? A mix of DIY projects, hand-me-downs, and items I've carefully curated over time. I've learned to stretch every dollar, making choices that allow me to indulge in my passions without breaking the bank. But people rarely consider the possibility that someone from a low-income background could simply be resourceful.</p>
+
+            <p>This interaction made me think critically about how we judge people based on appearances. On one hand, we're conditioned to see material possessions as shorthand for wealth or status. On the other, we hold biases that limit our understanding of how individuals navigate their circumstances. Why should being low-income mean I can't enjoy nice things? Why should someone assume my financial choices are any less deliberate or meaningful than theirs?</p>
+
+            <p>These stereotypes reflect a broader societal tendency to equate financial background with capability, creativity, or even worthiness. They strip away the complexity of individual experiences, reducing people to a single narrative: rich or poor, have or have-not. Yet, the reality is much messier. Many of us from low-income backgrounds have mastered the art of appearing to have more than we do—not out of deceit, but because we refuse to let financial constraints define us.</p>
+
+            <p>This isn't just about me; it's about how society interprets wealth, style, and identity. Why are aesthetics so closely tied to assumptions about privilege? Perhaps it's because material goods are visible, while the behind-the-scenes effort—budgeting, strategizing, sacrificing—is invisible. We see the polished exterior but ignore the hours of work, creativity, and planning that went into creating it.</p>
+
+            <p>Ultimately, my experience highlights a tension between perception and reality. Yes, aesthetics can be a reflection of wealth, but they can also be a reflection of resourcefulness, values, or priorities. It's easy to judge someone based on what you see, but much harder to dig deeper and understand the choices that brought them there. And if my taste in fashion or décor challenges someone's assumptions about what a "low-income student" should look like, maybe it's time to rethink those assumptions altogether.</p>
+        </article>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='entry4.html'">Previous</button>
+            <button class="nav-button home-button" onclick="window.location.href='../index.html'">Home</button>
+            <button class="nav-button" onclick="window.location.href='entry6.html'">Next</button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add animation delays to paragraphs
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
