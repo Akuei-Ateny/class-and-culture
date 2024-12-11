@@ -33,6 +33,7 @@
             margin: 0 auto;
             padding: 2rem;
             text-align: center;
+            position: relative;
         }
 
         header {
@@ -65,6 +66,47 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
+        .star-container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .star {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: #ffe4e1;
+            clip-path: polygon(
+                50% 0%,
+                63% 38%,
+                100% 38%,
+                69% 59%,
+                82% 100%,
+                50% 75%,
+                18% 100%,
+                31% 59%,
+                0% 38%,
+                37% 38%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: starRotate 20s linear infinite;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+        }
+
+        .star-content {
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+            animation: counterRotate 20s linear infinite;
+        }
+
         .floating-buttons {
             position: relative;
             height: 60vh;
@@ -89,6 +131,7 @@
             font-size: 1.2rem;
             color: #2c3e50;
             opacity: 0;
+            z-index: 2;
         }
 
         .entry-button:hover {
@@ -107,6 +150,16 @@
             100% { transform: translate(0, 0); }
         }
 
+        @keyframes starRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes counterRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -119,6 +172,15 @@
 
             .floating-buttons {
                 height: 50vh;
+            }
+
+            .star {
+                width: 150px;
+                height: 150px;
+            }
+
+            .star-content {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -135,6 +197,11 @@
         </div>
     </div>
     <div class="container">
+        <div class="star-container">
+            <div class="star">
+                <div class="star-content">SOC 369</div>
+            </div>
+        </div>
         <div class="floating-buttons" id="floatingButtons"></div>
     </div>
 
@@ -150,16 +217,18 @@
                 button.className = 'entry-button';
                 button.textContent = i;
                 
-                // Random initial position
-                const left = Math.random() * 80 + 10; // 10% to 90%
-                const top = Math.random() * 80 + 10;  // 10% to 90%
+                // Calculate position in a circle around the star
+                const angle = ((i - 1) / numEntries) * 2 * Math.PI;
+                const radius = 30; // percentage from center
+                const left = 50 + radius * Math.cos(angle);
+                const top = 50 + radius * Math.sin(angle);
                 
                 button.style.left = `${left}%`;
                 button.style.top = `${top}%`;
                 
                 // Random float animation
-                const translateX = (Math.random() - 0.5) * 40;
-                const translateY = (Math.random() - 0.5) * 40;
+                const translateX = (Math.random() - 0.5) * 20;
+                const translateY = (Math.random() - 0.5) * 20;
                 const duration = 3 + Math.random() * 2;
                 const delay = Math.random() * -2;
                 
@@ -192,8 +261,10 @@
                                        rect1.top > rect2.bottom);
                         
                         if (overlap) {
-                            const newLeft = Math.random() * 80 + 10;
-                            const newTop = Math.random() * 80 + 10;
+                            const angle = ((i - 1) / numEntries) * 2 * Math.PI;
+                            const newRadius = 35; // Slightly larger radius for overlapping buttons
+                            const newLeft = 50 + newRadius * Math.cos(angle);
+                            const newTop = 50 + newRadius * Math.sin(angle);
                             otherButton.style.left = `${newLeft}%`;
                             otherButton.style.top = `${newTop}%`;
                         }
